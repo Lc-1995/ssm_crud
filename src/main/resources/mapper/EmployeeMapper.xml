@@ -121,7 +121,7 @@
             distinct
         </if>
         <include refid="WithDept_Column_List"/>
-        from t_emp e left join t_dept d on e.'dept_id' = d.'dept_id'
+        from t_emp e left join t_dept d on e.dept_id = d.dept_id
         <if test="_parameter != null">
             <include refid="Example_Where_Clause"/>
         </if>
@@ -131,10 +131,10 @@
     </select>
 
     <!--根据主键查询员工带部门-->
-    <select id="selectByPrimaryKeyWithDept" resultMap="WithDeptResultMap">
+    <select id="selectByPrimaryKeyWithDept" parameterType="java.lang.Integer" resultMap="WithDeptResultMap">
         select
         <include refid="WithDept_Column_List"/>
-        from t_emp e left join t_dept d on e.'dept_id' = d.'dept_id'
+        from t_emp e left join t_dept d on e.dept_id = d.dept_id
         where emp_id = #{empId,jdbcType=INTEGER}
     </select>
 

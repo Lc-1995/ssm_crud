@@ -75,8 +75,12 @@
         <!--扫描mapper.xml文件-->
         <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
     </bean>
+
+    <!--Spring对mybatis的整合-->
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
+        <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
+        <!--sql执行支持批量执行-->
+        <constructor-arg name="executorType" value="BATCH"></constructor-arg>
     </bean>
 
     <!--扫描mapper接口-->

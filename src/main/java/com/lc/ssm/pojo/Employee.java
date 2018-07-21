@@ -13,6 +13,17 @@ public class Employee {
 
     private Dept dept;
 
+    public Employee() {
+    }
+
+    public Employee(Integer empId, String empName, String gender, String email, Integer deptId) {
+        this.empId = empId;
+        this.empName = empName;
+        this.gender = gender;
+        this.email = email;
+        this.deptId = deptId;
+    }
+
     public Integer getEmpId() {
         return empId;
     }
@@ -59,5 +70,17 @@ public class Employee {
 
     public void setDept(Dept dept) {
         this.dept = dept;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", empName='" + empName + '\'' +
+                ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
+                ", deptId=" + deptId +
+                ", dept=" + dept +
+                '}';
     }
 }
