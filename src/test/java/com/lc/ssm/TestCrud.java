@@ -54,10 +54,10 @@ public class TestCrud {
         LOG.info("Success!");*/
 
         // 4.select employee
-        Employee employee = employeeMapper.selectByPrimaryKey(1);
+        /*Employee employee = employeeMapper.selectByPrimaryKey(1);
         LOG.info("data:" + employee);
 
         Employee employee1 = employeeMapper.selectByPrimaryKeyWithDept(2);
-        LOG.info("data2:" + employee1);
+        LOG.info("data2:" + employee1);*/
     }
 }
