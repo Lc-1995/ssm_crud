@@ -11,5 +11,24 @@ import java.util.List;
  */
 public interface EmployeeService {
 
+    /**
+     *
+     * @Description: findAll
+     * @auther: lichao
+     * @date: 2018/7/27 18:03
+     * @param: []
+     * @return: java.util.List<com.lc.ssm.pojo.Employee>
+     */
     List<Employee> findAll();
+
+
+    /**
+     *
+     * @Description: findByNameAndPassword
+     * @auther: lichao
+     * @date: 2018/7/27 18:04
+     * @param: [username, password]
+     * @return: com.lc.ssm.pojo.Employee
+     */
+    Employee findByNameAndPassword(String username);
 }
