@@ -15,6 +15,9 @@
 
     <!--分页插件-->
     <plugins>
-        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--分页参数合理化, pageNum <= 0 :1,pageNum > pages :pages-->
+            <property name="reasonable" value="true"></property>
+        </plugin>
     </plugins>
 </configuration>
